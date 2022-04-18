@@ -760,7 +760,7 @@ this.grids = {
 			case 0:
 				// http://mxr.mozilla.org/l10n-mozilla-release/search?find=%2F&string=direction%3A+rtl
 				var rtlList = [ 'ar', 'fa', 'he' ];
-				var appLocale = Services.locale.getApplicationLocale().getCategory("NSILOCALE_MESSAGES");
+				var appLocale = Cc["@mozilla.org/intl/nslocaleservice;1"].getService(Ci.nsILocaleService).getApplicationLocale().getCategory("NSILOCALE_MESSAGES");
 				for(let locale of rtlList) {
 					if(appLocale.startsWith(locale)) {
 						return 'ltr';
