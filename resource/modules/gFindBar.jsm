@@ -154,9 +154,7 @@ this.baseInit = function(bar) {
 					Messenger.messageBrowser(this.browser, 'Sights.doCurrent', true);
 				}
 
-				if(Services.vc.compare(Services.appinfo.version, "53.0a1") < 0) {
-					this._enableFindButtons(val);
-				}
+				this._enableFindButtons(val);
 
 				this._updateCaseSensitivity(val);
 				if(Services.vc.compare(Services.appinfo.version, "51.0a1") >= 0) {
